@@ -1,0 +1,138 @@
+<html>
+<head>
+	<title>TEST HTML</title>
+	<!--内部样式-->
+	<style type="text/css">
+	H1.mylayout{border-width: 1;border:solid;text-align: center;color: red}
+	</style>
+	<script Language="JavaScript">
+		//函数
+		function show_msg()
+		{
+			alert("onclick事件成功调用了函数show_msg!")
+		}
+	</script>
+</head>
+<body style="background-image:url(雄鹰翱翔.jpg)">
+	<p>HTML的全称是HyperText Markup Language,即超文本标记语言，它是一种简单、通用的标记语言。之所以叫标记语言，
+	是因为，HTML通过不同的标签来标记文档不同的部分。我们看到的每个web页面，都是由HTML通过一系列定义好的标签生成的。
+	</p>
+	<h1 class="mylayout">HTML的基本元素</h1><!--这个标题使用了Style-->
+	<ul>
+		<li>标题元素</li>
+		<li>段落元素</li>
+		<li>链接元素</li>
+		<li>列表元素</li>
+		<li>图像元素</li>
+		<li>表格元素</li>
+		<li>表单元素</li>
+	</ul>
+
+	<h1>表单元素举例</h1>
+	<p>
+		<form>
+			您的Email：<input type="text" name="email"><br/><br/>
+			您是如何知道本书的：<br/><br/>
+			书店<input type="radio" name="from" value="store"><br/><br/>
+			网络<input type="radio" name="from" value="internet"><br/><br/>
+			朋友介绍<input type="radio" name="from" value="other"><br/><br/>
+			<input type="submit" value="提交"><br/><br/>
+			<input type="button" value="单击这里" onclick="show_msg()">
+		</form>
+	</p>
+
+	<p>以下列表type属性值取disc</p>
+	<ul type="disc">
+		<li>北京</li>
+		<li>上海</li>
+	</ul>
+
+	<p>以下列表type属性值取square</p>
+	<ul type="square">
+		<li>北京</li>
+		<li>上海</li>
+	</ul>
+
+	<p>以下列表type属性值取circle</p>
+	<ul type="circle">
+		<li>北京</li>
+		<li>上海</li>
+	</ul>
+
+	<ol type="A"><!--type属性值可以是‘1’ ‘A’ ‘a’ ‘I罗马数字’ ‘i小写罗马数字’-->
+		<li>Linux</li>
+		<li>Apache</li>
+		<li>MySQL</li>
+		<li>PHP</li>
+	</ol>
+
+	<table width="200px" align="left" border="1px">
+		<tr><td>单元1</td><td>单元2</td></tr>
+		<tr><td>单元3</td><td>单元4</td></tr>
+	</table>
+	<br/><br/><br/><br/>
+	<table width="300px" align="center" border="0px">
+		<tr><td>单元1</td><td>单元2</td></tr>
+		<tr><td>单元3</td><td>单元4</td></tr>
+	</table>
+	<br/><br/><br/><br/>
+	<table width="400px" align="right" border="2px">
+		<tr><td>单元1</td><td>单元2</td></tr>
+		<tr><td>单元3</td><td>单元4</td></tr>
+	</table>
+	<br/><br/><br/><br/>
+
+	<script Language="JavaScript">
+		//switch使用示例代码
+		var d=new Date();		//生成一个date对象d
+		theTime=d.getHours()	//使用Date对象d的getHours()方法获得当前时间的小时值，并把这个值赋给变量theTime
+		switch(theTime)			//根据变量theTime的值，选择不同的执行语句
+		{
+			case 7:
+				alert("Good Morning !");
+			break;
+			case 15:
+				alert("Good Afternoon !");
+			break;
+			case 19:
+				alert("Good Evening !");
+			break;
+			case 23:
+				alert("It's time to go to sleep !");
+			break;
+			default:
+				alert("Hello,My friend ！");
+		}
+		//for使用示例代码
+		for (var i = 0; i < 10; i++) 
+		{
+			document.write("The number is "+i);
+			document.write("<br/>");
+		};
+		//while使用示例代码
+		var j=0
+		while(j < 10)
+		{
+			document.write("The number is "+j);
+			document.write("<br/>");
+			j = j + 1;
+		}
+		//警告对话框
+		alert("这是一个警告对话框！");
+		//确认对话框
+		confirm("这是一个确认对话框！");
+		//显示日期时间
+		var some_date = new Date();
+		document.write(some_date.getDay()+"<br/>")
+		document.write(some_date+"<br/>")
+		document.write(some_date.toLocaleString()+"<br/><br/>")
+		//数组对象
+		var myFavorite = new Array()
+		myFavorite[0] = "mango"
+		myFavorite[1] = "banana"
+		myFavorite[2] = "apple"
+		var str = myFavorite.join(",")
+		document.write(str)
+	</script>
+</body>
+</html>
